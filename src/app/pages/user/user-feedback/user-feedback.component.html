@@ -1,0 +1,31 @@
+<div class="container">
+    <mat-card>
+        <mat-card-title>
+            <mat-card-content>
+                <h2 class="text"> Feedback form !!</h2>
+                <form [formGroup]="feedbackForm" (ngSubmit)="feedback()">
+                    
+                    <mat-form-field appearance="outline">
+                        <mat-label>Comment</mat-label>
+                        <input matInput formControlName="comments" placeholder="comments" required>
+                        <mat-error *ngIf="feedbackForm.get('comments')?.invalid && feedbackForm.get('comments')?.touched">
+                            Please enter a valid UserId
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Rate</mat-label>
+                        <input matInput formControlName="ratings" placeholder="ratings" required>
+                        <mat-error *ngIf="feedbackForm.get('ratings')?.invalid && feedbackForm.get('ratings')?.touched">
+                            Please enter a valid UserId
+                        </mat-error>
+                    </mat-form-field>
+
+                   
+                    <button mat-raised-button color="primary" type="submit" [disabled]="feedbackForm.invalid">Submit</button>
+
+                </form>
+            </mat-card-content>
+        </mat-card-title>
+    </mat-card>
+</div>

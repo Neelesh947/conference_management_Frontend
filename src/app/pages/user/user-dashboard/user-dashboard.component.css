@@ -1,0 +1,60 @@
+.child {
+    padding: 20px;
+    width: 780px;
+    background-color: white;
+    background: white;
+    box-shadow: 1px 1px 15px -7px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    display: flex;
+}
+
+.row > div {
+    flex: auto; 
+    padding: 10px;
+    box-sizing: border-box; 
+}
+
+.profile {
+    height: 130px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+h2 {
+    cursor: pointer;
+    color: #108ee9;
+}
+
+h2:hover{
+    text-decoration-line: underline;
+}
+
+p {
+    margin-bottom: 0em; /* Adjust as needed */
+}
+
+h5 {
+    margin-top: 10px; /* Adjust as needed */
+    margin-bottom: 0;
+}
+
+hr {
+    margin: 10px 0; /* Adjust as needed */
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.button{
+    display: flex;
+    margin-left: 10px;
+    justify-content: flex-end;
+}
+
+.button button{
+    margin-left: 10px;
+}

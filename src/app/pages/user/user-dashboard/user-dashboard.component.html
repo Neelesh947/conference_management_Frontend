@@ -1,0 +1,23 @@
+<div style="background-color: #f8f8f8; min-height: 91vh;">
+    <div style="padding-top:10px;"></div>
+
+    <div style="margin-top: 10px;" class="child" *ngFor="let conf of conference">
+        <div class="row">
+
+            <div col span="6">
+                <h2 style="cursor: pointer; color: #108ee9;">
+                    {{conf.name}}</h2>
+                <p>{{conf.location}}</p>    
+
+                <hr>
+                <p>{{conf.localDateTime}}</p>
+                
+                <hr>  
+                <div class="button">
+                    <button routerLink="/user/book" routerLinkActive="active" mat-raised-button color="primary">Book</button>
+                    <button routerLink="/user/feedback" routerLinkActive="active" mat-raised-button color="primary">Feedback</button>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>

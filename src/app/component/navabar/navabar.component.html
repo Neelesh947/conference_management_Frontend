@@ -1,0 +1,30 @@
+<mat-toolbar color="primary" class="navbar">
+    <span class="navbar-brand">WELCOME TO CONFERENCE MANAGEMENT</span>    
+    <div *ngIf="!isAdminLoggedIn && !isCustomerLoggedIn">
+      <mat-toolbar color="primary" class="navbar">
+        <span class="spacer"></span>
+        <a mat-button routerLink="register" routerLinkActive="active" class="register">Register</a>
+        <a mat-button routerLink="login" routerLinkActive="active" class="login">Login</a>
+      </mat-toolbar>
+    </div>
+      
+      
+      <div *ngIf="isAdminLoggedIn">
+        <mat-toolbar color="primary" class="navbar">
+          <span class="spacer"></span>
+          <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</button>
+          <button mat-button routerLink="/admin/create" routerLinkActive="active">Create Conference</button>
+          <button mat-button routerLinkActive="active" (click)="logout()">Logout</button>
+        </mat-toolbar>
+      </div>
+
+      <div *ngIf="isCustomerLoggedIn">
+        <mat-toolbar color="primary" class="navbar">
+          <span class="spacer"></span>
+          <button mat-button routerLink="/user/dashboard" routerLinkActive="active">Dashboard</button>
+          <button mat-button routerLinkActive="active" (click)="logout()">Logout</button>
+        </mat-toolbar>
+      </div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

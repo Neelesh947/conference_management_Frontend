@@ -1,0 +1,31 @@
+<div class="container">
+    <mat-card>
+        <mat-card-title>
+            <mat-card-content>
+                <h2 class="text"> Booking form !!</h2>
+                <form [formGroup]="bookConference" (ngSubmit)="feedback()">
+                    
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email" placeholder="email" required>
+                        <mat-error *ngIf="bookConference.get('email')?.invalid && bookConference.get('email')?.touched">
+                            Please enter a valid UserId
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Name</mat-label>
+                        <input matInput formControlName="name" placeholder="name" required>
+                        <mat-error *ngIf="bookConference.get('name')?.invalid && bookConference.get('name')?.touched">
+                            Please enter a valid UserId
+                        </mat-error>
+                    </mat-form-field>
+
+                   
+                    <button mat-raised-button color="primary" type="submit" [disabled]="bookConference.invalid">Submit</button>
+
+                </form>
+            </mat-card-content>
+        </mat-card-title>
+    </mat-card>
+</div>

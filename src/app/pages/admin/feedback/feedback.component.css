@@ -1,0 +1,18 @@
+.booking-table {
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Adjust the spacing as needed */
+}
+  
+.booking-table tbody tr {
+    border-bottom: 1px solid #ccc; /* Divider line */
+}
+  
+.booking-table th, .booking-table td {
+    padding: 8px 10px; /* Adjust the padding as needed */
+    text-align: left;
+}
+ 
+table{
+  margin: 0 auto;
+  width: 80%;
+}

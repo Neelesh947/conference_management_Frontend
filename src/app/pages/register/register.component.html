@@ -1,0 +1,36 @@
+<div class="container">
+    <mat-card>
+        <mat-card-title>
+            <mat-card-content>
+                <h2 class="text"> Sign Up Here !!</h2>
+                <form [formGroup]="signupForm" (ngSubmit)="register()">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Name</mat-label>
+                        <input matInput formControlName="name" placeholder="Name" required>
+                        <mat-error *ngIf="signupForm.get('name')?.invalid && signupForm.get('name')?.touched">
+                            Please enter a valid name
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="username" placeholder="username" required>
+                        <mat-error *ngIf="signupForm.get('username')?.invalid && signupForm.get('username')?.touched">
+                            Please enter a valid Email
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput type="password" formControlName="password" placeholder="password" required>
+                        <mat-error *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched">
+                            Please enter a valid Password
+                        </mat-error>
+                    </mat-form-field>
+                    <button mat-raised-button color="primary" type="submit" [disabled]="signupForm.invalid">SignUp</button>
+
+                </form>
+            </mat-card-content>
+        </mat-card-title>
+    </mat-card>
+</div>

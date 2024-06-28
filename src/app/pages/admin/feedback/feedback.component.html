@@ -1,0 +1,17 @@
+<table class="booking-table">
+    <thead>
+      <tr>
+        <th>Feedback Id</th>        
+        <th>Comments</th>
+        <th>Ratings</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of feedback">
+        <td>{{ booking.feedId }}</td>
+        <td>{{ booking.comments }}</td>
+        <td>{{ booking.ratings }}</td>                  
+      </tr>
+    </tbody>
+  </table>
+  
